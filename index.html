@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sneha! 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero-container">
+        <!-- Floating hearts animation -->
+        <div class="floating-hearts">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        
+        <!-- Confetti container -->
+        <div class="confetti-container" id="confetti"></div>
+        
+        <!-- Main hero content -->
+        <div class="hero-content">
+            <h1 class="birthday-title">
+                <span class="letter">H</span>
+                <span class="letter">a</span>
+                <span class="letter">p</span>
+                <span class="letter">p</span>
+                <span class="letter">y</span>
+                <span class="space">&nbsp;</span>
+                <span class="letter">B</span>
+                <span class="letter">i</span>
+                <span class="letter">r</span>
+                <span class="letter">t</span>
+                <span class="letter">h</span>
+                <span class="letter">d</span>
+                <span class="letter">a</span>
+                <span class="letter">y</span>
+            </h1>
+            
+            <h2 class="name-title">Sneha! 💖</h2>
+            
+            <!-- Birthday Cake Section with Photos -->
+            <div class="cake-section">
+                <div class="cake-container">
+                    <!-- Left Side Photos -->
+                    <div class="photo-gallery left-photos">
+                        <div class="photo-frame photo-left-top">
+                            <img src="images/photo1.jpg" alt="Beautiful Sneha" class="photo">
+                            <div class="photo-overlay">
+                                <span class="photo-heart">💕</span>
+                            </div>
+                        </div>
+                        <div class="photo-frame photo-left-bottom">
+                            <img src="images/photo2.jpg" alt="Beautiful Sneha" class="photo">
+                            <div class="photo-overlay">
+                                <span class="photo-heart">💖</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Center Cake Container -->
+                    <div class="cake-center">
+                        <!-- Birthday Message (hidden initially) -->
+                        <div class="birthday-message">
+                            Happy Birthday cutie! Love you so much Sneha 🎂💕
+                        </div>
+                        
+                        <!-- Cake Sparkles Container -->
+                        <div class="cake-sparkles"></div>
+                        
+                        <!-- The Birthday Cake -->
+                        <div class="birthday-cake">
+                            <!-- Cake decorations -->
+                            <div class="cake-decorations">
+                                <div class="cake-decoration">🌹</div>
+                                <div class="cake-decoration">💕</div>
+                                <div class="cake-decoration">🎀</div>
+                                <div class="cake-decoration">✨</div>
+                                <div class="cake-decoration">🍓</div>
+                                <div class="cake-decoration">🍒</div>
+                            </div>
+                            
+                            <!-- Bottom Layer (Base) -->
+                            <div class="cake-layer cake-layer-base">
+                                <div class="cake-frosting frosting-base"></div>
+                                <div class="cake-sprinkles sprinkles-base"></div>
+                            </div>
+                            
+                            <!-- Second Layer -->
+                            <div class="cake-layer cake-layer-2">
+                                <div class="cake-frosting frosting-2"></div>
+                                <div class="cake-sprinkles sprinkles-2"></div>
+                            </div>
+                            
+                            <!-- Third Layer -->
+                            <div class="cake-layer cake-layer-3">
+                                <div class="cake-frosting frosting-3"></div>
+                                <div class="cake-sprinkles sprinkles-3"></div>
+                            </div>
+                            
+                            <!-- Fourth Layer (Top) -->
+                            <div class="cake-layer cake-layer-4">
+                                <div class="cake-frosting frosting-4"></div>
+                                <div class="cake-sprinkles sprinkles-4"></div>
+                            </div>
+                            
+                            <!-- 3 Big Candles -->
+                            <div class="candles-container">
+                                <div class="candle big-candle">
+                                    <div class="candle-stick"></div>
+                                    <div class="candle-flame"></div>
+                                </div>
+                                <div class="candle big-candle">
+                                    <div class="candle-stick"></div>
+                                    <div class="candle-flame"></div>
+                                </div>
+                                <div class="candle big-candle">
+                                    <div class="candle-stick"></div>
+                                    <div class="candle-flame"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Blow instruction -->
+                        <p class="blow-instruction">Click on the candles to blow them out! 🕯️</p>
+                    </div>
+                    
+                    <!-- Right Side Photos -->
+                    <div class="photo-gallery right-photos">
+                        <div class="photo-frame photo-right-top">
+                            <img src="images/photo3.jpg" alt="Beautiful Sneha" class="photo">
+                            <div class="photo-overlay">
+                                <span class="photo-heart">💝</span>
+                            </div>
+                        </div>
+                        <div class="photo-frame photo-right-bottom">
+                            <img src="images/photo4.jpg" alt="Beautiful Sneha" class="photo">
+                            <div class="photo-overlay">
+                                <span class="photo-heart">💗</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sound-trigger" id="soundTrigger">
+                <div class="music-icon">🎵</div>
+                <p>Click for birthday music!</p>
+            </div>
+            
+            <audio id="birthdayMusic" loop autoplay preload="auto" playsinline>
+                <source src="audio/birthday-audio.mp3" type="audio/mpeg">
+                <p>Audio file: audio/birthday-audio.mp3</p>
+            </audio>
+        </div>
+        
+        <!-- Navigation menu -->
+        <nav class="main-nav">
+            <a href="why-i-love-you.html" class="nav-link">
+                <span class="nav-icon">💕</span>
+                Why I Love You
+            </a>
+            <a href="college-diaries.html" class="nav-link">
+                <span class="nav-icon">📚</span>
+                College Diaries
+            </a>
+            <a href="birthday-wishes.html" class="nav-link">
+                <span class="nav-icon">🎂</span>
+                Birthday Wishes
+            </a>
+            
+        </nav>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

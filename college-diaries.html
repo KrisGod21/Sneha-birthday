@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Diaries - Sneha 💙</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container diaries-page">
+        <!-- Back to home button -->
+        <a href="index.html" class="back-btn">
+            <span>🏠</span> Back to Birthday
+        </a>
+        
+        <!-- Floating hearts for this page -->
+        <div class="floating-hearts">
+            <div class="heart small"></div>
+            <div class="heart medium"></div>
+            <div class="heart large"></div>
+        </div>
+        
+        <div class="content-wrapper">
+            <header class="page-header">
+                <h1>College Diaries 💙</h1>
+                <p class="subtitle">How you made my life so much happier</p>
+            </header>
+            
+            <!-- Video section -->
+            <div class="video-section">
+                <div class="video-container">
+                    <div class="video-frame">
+                        <video id="collegeVideo" controls poster="images/video-placeholder.jpg">
+                            <source src="videos/college-diaries-edit.mp4" type="video/mp4">
+                            <p>Add your special "College Diaries" video edit as: videos/college-diaries-edit.mp4</p>
+                        </video>
+                        <div class="video-overlay">
+                            <p>Tumhe dekhte hi yeh gaana play hone lagta hai💙</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Secret page access -->
+            <div class="diaries-section">
+                <div class="upload-card" style="max-width: 520px; margin: 0 auto; text-align: center;">
+                    <h3>Thoda budget issues hai isiliye college diaries next time. But here's a Secret Page Access ✨</h3>
+                    <p style="margin: 0.5rem 0 1rem;">What's the latest movie we saw together?</p>
+                    <form id="secretAccessForm">
+                        <input type="text" id="secretAnswer" placeholder="Type your answer" 
+                               style="padding: 10px 14px; border-radius: 20px; border: 2px solid #FF69B4; width: 100%; font-family: 'Quicksand', sans-serif; font-weight: 600; color: #DA70D6;" />
+                        <button type="submit" class="upload-btn" style="margin-top: 12px;">Unlock</button>
+                    </form>
+                    <div id="secretMessage" style="margin-top: 10px; color: #E91E63; font-weight: 600;"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Hide video overlay when video starts playing
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('collegeVideo');
+            const overlay = video ? video.parentElement.querySelector('.video-overlay') : null;
+            
+            if (video && overlay) {
+                video.addEventListener('play', function() {
+                    overlay.classList.add('hidden');
+                });
+                
+                video.addEventListener('pause', function() {
+                    overlay.classList.remove('hidden');
+                });
+            }
+
+            // Secret page gate
+            const form = document.getElementById('secretAccessForm');
+            const input = document.getElementById('secretAnswer');
+            const message = document.getElementById('secretMessage');
+            if (form && input && message) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const answer = (input.value || '').trim().toLowerCase();
+                    if (answer === 'saiyaara') {
+                        window.location.href = 'secret.html';
+                    } else {
+                        message.textContent = 'Yeh bhi dekh lenge babu. Firse try karo🙂';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

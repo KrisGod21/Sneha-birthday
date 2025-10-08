@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops! You clicked it 🤭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background: #FFF7E6; font-family: 'Quicksand', sans-serif; }
+        .goofy-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+        .goofy-card { background: #fff; border-radius: 20px; padding: 1rem; max-width: 720px; width: 100%; box-shadow: 0 12px 30px rgba(255, 193, 7, 0.25); border: 2px solid #FFE8A1; }
+        .goofy-header { text-align: center; margin-bottom: .5rem; color: #D48806; font-weight: 700; }
+        .goofy-video { border-radius: 16px; overflow: hidden; }
+        .goofy-video video { width: 100%; height: 360px; object-fit: cover; display: block; }
+        .back { display: inline-block; margin-top: .75rem; color: #8a6d3b; text-decoration: none; font-weight: 700; }
+        @media (max-width: 768px) { .goofy-video video { height: 220px; } }
+    </style>
+</head>
+<body>
+    <div class="goofy-page">
+        <div class="goofy-card">
+            <div class="goofy-header">Bola tha na babu🤣🤣😝</div>
+            <div class="goofy-video">
+                <video id="goofyVid" autoplay muted playsinline controls>
+                    <source src="videos/goofy-video.mp4" type="video/mp4">
+                    Your browser doesn't support video playback.
+                </video>
+            </div>
+            <a href="secret.html" class="back">⬅ Back to Secret Page</a>
+        </div>
+    </div>
+    <script>
+        // Try to unmute on first interaction
+        (function(){
+            const v = document.getElementById('goofyVid');
+            if(!v) return;
+            const unmute = ()=>{ v.muted = false; v.play().catch(()=>{}); window.removeEventListener('click', unmute); window.removeEventListener('touchstart', unmute); };
+            window.addEventListener('click', unmute, { once:true });
+            window.addEventListener('touchstart', unmute, { once:true });
+        })();
+    </script>
+</body>
+</html>
+
+
